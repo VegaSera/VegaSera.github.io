@@ -91,6 +91,8 @@ It appears I have greatly misinterpreted the data. The valley in July wasn't a s
 
 However, it's at this point I reach a standstill with what I can find. I take all of the events that that correspond to this format and take place in july, run them through a function to get their qualifier arrow averages, drop the null values (for missing qualifier data), and after all that, I have very few options remaining. Medellin, Columbia in 2013 (Avg 8.52), Berlin 2018 (Avg 8.32) and Berlin 2019 (Avg 8.20), all of which averaging lower than what we expect. 
 
+The only reason our july box isn't even lower is the inclusion of World Championship events with the other World-level competition levels. Each of the World Championship competitions comes in much closer to our expected median, New York City 2003 (Avg 9.04) and Copenhagen 2015 (Avg 8.74).
+
 I tried all manner of explanation for this. At first I thought it might be weather related, given that it's july. In Medellin, Columbia during the dates of its tournament, the temperature did not rise above 80F/26.6C, and the wind was mild. Both years in Berlin have similar stories, with 2019 showing some minor gusts.
 
 At this time, I'm going to have to write this down as similar to my first outcome. I do not have enough specific data to make specific conclusions about what happens in July in these World Cup competitions.
