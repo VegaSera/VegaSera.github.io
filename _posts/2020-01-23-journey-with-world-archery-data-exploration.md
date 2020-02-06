@@ -19,7 +19,7 @@ I began by taking making an API call that would return all competitions within a
   },
   "items": [...
 ```
-However, after a bit of looking, I realized a lot of these competition entries had no data associated with them. No results turned in. Luckily there was an option to perform the API in such a way that only competitions with results would return.
+However, after a bit of looking, I realized a lot of these competition entries had no data associated with them. No results turned in. Luckily there was an option to perform the API call in such a way that only competitions with results would return.
 
 ```json
 {
