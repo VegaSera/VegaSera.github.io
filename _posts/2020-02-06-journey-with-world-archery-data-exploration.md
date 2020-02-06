@@ -107,10 +107,8 @@ We should be willing to adapt and understand that all is not as it seems at firs
 
 
 
-Google Colab Notebooks used during this assignment
-
-[Initial notebook for Olympics exploration and original seasonal bias discovery](https://github.com/VegaSera/World-Archery-Analysis/blob/master/World_Archery_Exploration_and_Arrow_Averages.ipynb)
-
+Google Colab Notebooks used during this assignment  
+[Initial notebook for Olympics exploration and original seasonal bias discovery](https://github.com/VegaSera/World-Archery-Analysis/blob/master/World_Archery_Exploration_and_Arrow_Averages.ipynb)  
 [Second notebook for processing Qualifier arrow average, instead of match arrow average](https://github.com/VegaSera/World-Archery-Analysis/blob/master/WA_Arrow_Averages_Qualifiers.ipynb)
 
 
