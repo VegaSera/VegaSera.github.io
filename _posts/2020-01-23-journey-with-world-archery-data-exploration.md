@@ -97,6 +97,8 @@ I tried all manner of explanation for this. At first I thought it might be weath
 
 At this time, I'm going to have to write this down as similar to my first outcome. I do not have enough specific data to make specific conclusions about what happens in July in these World Cup competitions.
 
+## Conclusions
+
 I would have loved if this post showed some amazing insight into archery tournaments, showing some hidden dynamic of tournament life that either no one knew, or no one made public. I would have loved if this post showed some significant bump or dip in tournament scores before or after the olympics. But in the end, what this post shows is what happens when we get attached to ideas about our data, and how we should handle the data and ourselves when we are told that what we want to see isn't a part of reality as the data reflects it. 
 
 We should be willing to adapt and understand that all is not as it seems at first glance, regardless of how cool or interesting that first glance was.
