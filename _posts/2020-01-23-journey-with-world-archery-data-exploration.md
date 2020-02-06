@@ -85,7 +85,7 @@ Wait, what? Where's the cool sine wave? Where's the odd anomaly that we saw in t
 
 Let's see if we can't figure out exactly what's going on here. Let's just make a few more graphs to explore and... oh...
 
--Data showing the completely flat july metric outside of the world cup-
+![Non-World Level Qualifiers](https://i.imgur.com/bUPOsNu.png)
 
 It appears I have greatly misinterpreted the data. The valley in July wasn't a seasonal thing, as least not something that transcends all levels of competitive archery. It's something that exists specifically **in the world cup level**.
 
