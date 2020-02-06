@@ -88,7 +88,7 @@ Let's see if we can't figure out exactly what's going on here. Let's just make a
 
 ![Non-World Level Qualifiers](https://i.imgur.com/bUPOsNu.png)
 
-It appears I have greatly misinterpreted the data. The valley in July wasn't a seasonal thing, as least not something that transcends all levels of competitive archery. It's something that exists specifically **in the world cup level**.
+It appears I have greatly misinterpreted the data. The median of June, July and August outside of World events is practically a ***perfectly flat line***. The valley in July wasn't a seasonal thing, as least not something that transcends all levels of competitive archery. It's something that exists specifically **in the world cup level**.
 
 However, it's at this point I reach a standstill with what I can find. I take all of the events that that correspond to this format and take place in july, run them through a function to get their qualifier arrow averages, drop the null values (for missing qualifier data), and after all that, I have very few options remaining. Medellin, Columbia in 2013 (Avg 8.52), Berlin 2018 (Avg 8.32) and Berlin 2019 (Avg 8.20), all of which averaging lower than what we expect. 
 
