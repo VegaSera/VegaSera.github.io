@@ -9,7 +9,7 @@ The scope of this data exploration and analysis changed several times over a cou
 
 ## The Olympics
 
-I began by taking making an API call that would return all competitions within a given time frame, starting off in the year the Rio Summer Olympics too place. It was this point when I started to realize the sort of state the data was in.
+I began by making an API call that would return all competitions within a given time frame, starting off in the year the Rio Summer Olympics too place. It was this point when I started to realize the sort of state the data was in.
 ```json
 {
   "pageInfo": {
@@ -77,7 +77,7 @@ However, I underestimated exactly what I was doing, and the individual API calls
 
 Despite all that, we have our data with our much greater number of datapoints, and it's time to get to plotting it!
 
---Data showing something other than a seasonal bias--
+![Qualifiers](https://i.imgur.com/9f336pR.png)
 
 ## Pivotting again
 
