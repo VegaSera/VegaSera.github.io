@@ -5,9 +5,10 @@ subtitle: A journey through different hypotheses in archery data.
 ---
 
 
+
 The scope of this data exploration and analysis changed several times over a couple of weeks. I originally requested World Archery API access without any particular data in mind, but during the emails with Chris Wells, my contact at World Archery, we agreed that an interesting place to start would be historical data regarding the Olympics, and how the Olympics affects arrow averages in tournaments before, during, and after the Olympics themselves.
 
-## The Olympics
+# The Olympics
 
 I began by making an API call that would return all competitions within a given time frame, starting off in the year the Rio Summer Olympics too place. It was this point when I started to realize the sort of state the data was in.
 ```json
@@ -45,17 +46,17 @@ After getting rid of all of the unsuitable formats, as well as the competitions 
 In addition to the 2016 data, I also collected data from three years before and three years after, to see if I could catch any trends. Some years had more results than 2016 (2015 with 10, 2018 with 14) and one other year (2014) had 6 usable competitions. 2013 had no usable data at all. At this point I graphed all of the data I collected, originally starting with a line plot, with each year being a different line, but my low sample size did me no favors in this case. I then decided to group all of the competitions by month and display them all together.
 
 ![OlympicsAverages](https://i.imgur.com/lPdr8uQ.png)
-A note: I would have used notched boxplots here to give a confidence value on the medians, but with the low sample size here, several of the notches extend beyond the box, and just look ugly in my opinion.
+*A note: I would have used notched boxplots here to give a confidence value on the medians, but with the low sample size here, several of the notches extend beyond the box, and just look ugly in my opinion.*
 
 Well, the olympics appears to be a slightly above average event as far as this is concerned, but more interesting is the sort of sine wave pattern that the data shows, with peaks in april and late september, and a valley in july and over the holidays. The original question regarding the Olympics was a bust, and this strange seasonal bias was clearly what I should be exploring.
 
-## The Seasonal Bias 
+# The Seasonal Bias 
 
 After discovering this for the first time, I didn't know what to think about it, so I sent an email back to Chris at World Archery, and he was equally surprised by what I found. He explained the valley over the holidays can be easily explained by the fact that it's the holidays, and that the major peak we see in September is due to the World Cup Finals, where the best in the world are playing at their best. He also offered a second mode of getting more data and more consistent averages, Qualifier rounds.
 
 Each tournament has qualifier rounds to determine tournament seeding. The tournaments generally operate on a 72 arrow or 144 arrow, depending on what year they happened in, and always in sets of 36 (six arrows per end, with six ends). Strangely enough, qualifiers were much more consistently recorded than actual match scores. Not only was I able to get more scores per eligible match, I was also able to expand the years I could search from 2014-present, to 2000-present. This resulted in a large bump in data points from only a handful, to nearly 9000 individual competitors.
 
-I was fairly happy with the function I created to gather this data. Here it is on __my github__, but I have it below here in pseudocode format:
+I was fairly happy with the function I created to gather this data. Here it is on [my github](https://github.com/VegaSera/World-Archery-Analysis/blob/master/WA_Arrow_Averages_Qualifiers.ipynb), but I have it below here in pseudocode format:
 In order to get this data, the API call required a competition ID, an athlete ID, and a category code.
 
 ```python
@@ -79,7 +80,7 @@ Despite all that, we have our data with our much greater number of datapoints, a
 
 ![Qualifiers](https://i.imgur.com/9f336pR.png)
 
-## Pivotting again
+# Pivotting again
 
 Wait, what? Where's the cool sine wave? Where's the odd anomaly that we saw in the above graph? Sure, something is *certainly* happening in July, and the confidence values shown in our notches tell us it's quite unlikely that this is due to random chance. And it even still looks like a seasonal bias in the women's recurve graph, just... much less pronounced than it was in the original. But that dip in July is still definitely there.
 
@@ -102,5 +103,10 @@ At this time, I'm going to have to write this down as similar to my first outcom
 I would have loved if this post showed some amazing insight into archery tournaments, showing some hidden dynamic of tournament life that either no one knew, or no one made public. I would have loved if this post showed some significant bump or dip in tournament scores before or after the olympics. But in the end, what this post shows is what happens when we get attached to ideas about our data, and how we should handle the data and ourselves when we are told that what we want to see isn't a part of reality as the data reflects it. 
 
 We should be willing to adapt and understand that all is not as it seems at first glance, regardless of how cool or interesting that first glance was.
+
+
+Google Colab Notebooks used during this assignment
+[Initial notebook for Olympics exploration and original seasonal bias discovery](https://github.com/VegaSera/World-Archery-Analysis/blob/master/World_Archery_Exploration_and_Arrow_Averages.ipynb)
+[Second notebook for processing Qualifier arrow average, instead of match arrow average](https://github.com/VegaSera/World-Archery-Analysis/blob/master/WA_Arrow_Averages_Qualifiers.ipynb)
 
 
