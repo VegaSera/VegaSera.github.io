@@ -10,7 +10,7 @@ The scope of this data exploration and analysis changed several times over a cou
 
 # The Olympics
 
-I began by making an API call that would return all competitions within a given time frame, starting off in the year the Rio Summer Olympics too place. It was this point when I started to realize the sort of state the data was in.
+I began by making an API call that would return all competitions within a given time frame, starting off in the year the Rio Summer Olympics took place. It was this point when I started to realize the sort of state the data was in.
 ```json
 {
   "pageInfo": {
@@ -33,7 +33,7 @@ However, after a bit of looking, I realized a lot of these competition entries h
  ```
  Over 1300 results eliminated with no useful data to us. Only 35 events remained out of 1339 total events in 2016. So now all we need to do is pull the scores from each, get an average, and toss it on a plot to see where everything lines up at.
 
-... Except there's still a couple things we're forgetting that requires a little explanation of Olympic format to understand. Olympic Archery competitions, at least for Recurve, operate under the Freestyle Recurve format. This format takes place outside, at 70 meters, with a 122cm target face, with scores ranging from 1 to 10, with zero for a miss. The data we're specifically looking at for comparing the Olympics to other events is the average of all arrows shot during an elimination match.
+... Except there's still a couple things we're forgetting that require a little explanation of Olympic format to understand. Olympic Archery competitions, at least for Recurve, operate under the Freestyle Recurve format. This format takes place outside, at 70 meters, with a 122cm target face, with scores ranging from 1 to 10, with zero for a miss. The data we're specifically looking at for comparing the Olympics to other events is the average of all arrows shot during an elimination match.
 
 In our data, we have competitions like the Dublin 2016 World Archery Field Championships. Unfortunately, we can't really compare field archery to Freestyle Recurve for a number of reasons. First and foremost, it uses an entirely different score system, from 0 to 6 rather than 0 to 10. Secondly, field archers are often required to make strange shots, such as shooting uphill at a 20 degree angle, or standing on the side of a hill and shooting down at a target, and all from a variety of ranges. It would not be fair to compare Field and Freestyle Recurve.
 
