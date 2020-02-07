@@ -48,11 +48,11 @@ In addition to the 2016 data, I also collected data from three years before and 
 ![OlympicsAverages](https://i.imgur.com/lPdr8uQ.png)
 *A note: I would have used notched boxplots here to give a confidence value on the medians, but with the low sample size here, several of the notches extend beyond the box, and just look ugly in my opinion.*
 
-Well, the olympics appears to be a slightly above average event as far as this is concerned, but more interesting is the sort of sine wave pattern that the data shows, with peaks in april and late september, and a valley in july and over the holidays. The original question regarding the Olympics was a bust, and this strange seasonal bias was clearly what I should be exploring.
+Well, the Olympics appears to be a slightly above average event as far as this is concerned, but more interesting is the sort of sine wave pattern that the data shows, with peaks in April and late September, and a valley in July and over the holidays. The original question regarding the Olympics was a bust, and this strange seasonal bias was clearly what I should be exploring.
 
 # The Seasonal Bias 
 
-After discovering this for the first time, I didn't know what to think about it, so I sent an email back to Chris at World Archery, and he was equally surprised by what I found. He explained the valley over the holidays can be easily explained by the fact that it's the holidays, and that the major peak we see in September is due to the World Cup Finals, where the best in the world are playing at their best. He also offered a second mode of getting more data and more consistent averages, Qualifier rounds.
+After discovering this for the first time, I didn't know what to think about it, so I sent an email back to Chris at World Archery, and he was equally surprised by what I found. He explained the valley over the holidays can be easily explained by the fact that it's the holidays, and that the major peak we see in September is due to the World Cup Finals, where the best in the world are playing at their best. He also offered a second mode of getting more data and more consistent averages; qualifier rounds.
 
 Each tournament has qualifier rounds to determine tournament seeding. The tournaments generally operate on a 72 arrow or 144 arrow, depending on what year they happened in, and always in sets of 36 (six arrows per end, with six ends). Strangely enough, qualifiers were much more consistently recorded than actual match scores. Not only was I able to get more scores per eligible match, I was also able to expand the years I could search from 2014-present, to 2000-present. This resulted in a large bump in data points from only a handful, to nearly 9000 individual competitors.
 
@@ -92,7 +92,7 @@ It appears I have greatly misinterpreted the data. The median of June, July and 
 
 However, it's at this point I reach a standstill with what I can find. I take all of the events that that correspond to this format and take place in july, run them through a function to get their qualifier arrow averages, drop the null values (for missing qualifier data), and after all that, I have very few options remaining. Medellin, Columbia in 2013 (Avg 8.52), Berlin 2018 (Avg 8.32) and Berlin 2019 (Avg 8.20), all of which averaging lower than what we expect. 
 
-The only reason our july box isn't even lower is the inclusion of World Championship events with the other World-level competition levels. Each of the World Championship competitions comes in much closer to our expected median, New York City 2003 (Avg 9.04) and Copenhagen 2015 (Avg 8.74).
+The only reason our July box isn't even lower is the inclusion of World Championship events with the other World-level competition levels. Each of the World Championship competitions comes in much closer to our expected median, New York City 2003 (Avg 9.04) and Copenhagen 2015 (Avg 8.74).
 
 I tried all manner of explanation for this. At first I thought it might be weather related, given that it's july. In Medellin, Columbia during the dates of its tournament, the temperature did not rise above 80F/26.6C, and the wind was mild. Both years in Berlin have similar stories, with 2019 showing some minor gusts.
 
@@ -100,7 +100,7 @@ At this time, I'm going to have to write this down as similar to my first outcom
 
 ## Conclusions
 
-I would have loved if this post showed some amazing insight into archery tournaments, showing some hidden dynamic of tournament life that either no one knew, or no one made public. I would have loved if this post showed some significant bump or dip in tournament scores before or after the olympics. But in the end, what this post shows is what happens when we get attached to ideas about our data, and how we should handle the data and ourselves when we are told that what we want to see isn't a part of reality as the data reflects it. 
+I would have loved if this post showed some amazing insight into archery tournaments, showing some hidden dynamic of tournament life that either no one knew, or no one made public. I would have loved if this post showed some significant bump or dip in tournament scores before or after the Olympics. But in the end, what this post shows is what happens when we get attached to ideas about our data, and how we should handle the data and ourselves when we are told that what we want to see isn't a part of reality as the data reflects it. 
 
 We should be willing to adapt and understand that all is not as it seems at first glance, regardless of how cool or interesting that first glance was.
 
