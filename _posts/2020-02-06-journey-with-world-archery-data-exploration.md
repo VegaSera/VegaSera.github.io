@@ -6,7 +6,7 @@ subtitle: A journey through different hypotheses in archery data.
 
 
 
-The scope of this data exploration and analysis changed several times over a couple of weeks. I originally requested World Archery API access without any particular data in mind, but during the emails with Chris Wells, my contact at World Archery, we agreed that an interesting place to start would be historical data regarding the Olympics, and how the Olympics affects arrow averages in tournaments before, during, and after the Olympics themselves.
+The scope of this data exploration and analysis changed several times over a couple of weeks. I originally requested World Archery API access without any particular data in mind, but during the emails with Chris, my contact at World Archery, we agreed that an interesting place to start would be historical data regarding the Olympics, and how the Olympics affects arrow averages in tournaments before, during, and after the Olympics themselves.
 
 # The Olympics
 
