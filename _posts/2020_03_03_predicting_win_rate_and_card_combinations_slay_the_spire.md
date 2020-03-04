@@ -12,10 +12,10 @@ Slay the Spire is a card-based video game, the goal of which is to ascend the sp
 
 A few things we need to define before we start.
 * **Run** - A run is what we define as a single standalone game. The start of each run is typically in the same configuration, although Neow can give different bonuses at the start.
-* **Cards** - Cards are the actions that a player can take during combat during the game. Each card comes with an energy cost, and an effect. A few example cards below (Pictures):
+* **Cards** - Cards are the actions that a player can take during combat during the game. Each card comes with an energy cost, and an effect. Cards can also be upgraded to increase their effects, indicated with a '+' next to their name. A few example cards below (Pictures):
   * Strike - 1 cost, deals 6 damage to a target.
   * Defend - 1 cost, blocks 5 damage.
-  * Whirlwind - X cost, deals 5 damage to all enemies X times. (Uses all energy when played)
+  * Whirlwind+ - X cost, deals 8 damage to all enemies X times. (Uses all energy when played)
 * **Relics** - Relics are items that the player can find during their time in the Spire. These relics cannot be used directly, but their effects are either passive, or can be triggered with certain cards or conditions. Examples of relics:
   * Burning Blood - At the end of combat, heal 6 HP.
   * Ornamental Fan - Every time you play 3 attacks in a single turn, gain 4 Block.
