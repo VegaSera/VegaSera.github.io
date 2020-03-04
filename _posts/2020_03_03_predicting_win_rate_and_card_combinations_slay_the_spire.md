@@ -63,3 +63,10 @@ To start out, we check our baseline for this set:
 
 During the various stages of modelling, with different sized subsections of the dataset, we have seen this baseline oscillate between 88% and 92.5% failure rate. However for this model, we will take the above value as our official baseline.
 
+##First Model - Random Forest Classifier
+
+##Second Model - Gradient Boosting with XGBClassifier
+
+##Third Model - Ridge Regression Classifier with RidgeClassifierCV
+
+# Analysis and Interpretations of our Models
