@@ -51,7 +51,7 @@ We now have gone from four columns to 690 columns, and we're seeing cards like M
 
 [Picture and Description of the Prismatic Shard]
 
-Prismatic Shard allows us to choose cards from another class when we are offered cards. So at this point, we have two options. We can leave the dataset as is, and deal with our nearly 700 features, or we can remove prismatic shard and all of the extra cards that come with it. For the sake of simplicity and the model, I decided on the second option. Luckily, with everything separated out like we have it, it's trivial to filter by a specific relic.
+Prismatic Shard allows us to choose cards from other classes when we are offered cards. So at this point, we have two options. We can leave the dataset as is, and deal with our nearly 700 features, or we can remove prismatic shard and all of the extra cards that come with it. For the sake of simplicity and the model, I decided on the second option. Luckily, with everything separated out like we have it, it's trivial to filter by a specific relic.
 
 `df = df[df['RELIC_PrismaticShard'] == 0]`
 
@@ -74,5 +74,7 @@ During the various stages of modelling, with different sized subsections of the 
 # Analysis and Interpretations of our Models
 
 # Conclusion
+
+## What more could be done?
 
 ### Colab Notebooks and Github Links
