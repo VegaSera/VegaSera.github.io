@@ -2,7 +2,7 @@
 layout: post
 title: Slay The Spire - Predictive Modelling and Card Value Analysis
 subtitle: Do some cards and relics shine far above others?
-published: false
+published: true
 date: '2020-03-03'
 ---
 
