@@ -2,6 +2,8 @@
 layout: post
 title: Slay The Spire - Predictive Modelling and Card Value Analysis
 subtitle: Do some cards and relics shine far above others?
+published: true
+date: '2020-03-03'
 ---
 
 First, we need to explain some important aspects of what Slay the Spire is, and how it relates to our project.
@@ -70,3 +72,7 @@ During the various stages of modelling, with different sized subsections of the 
 ##Third Model - Ridge Regression Classifier with RidgeClassifierCV
 
 # Analysis and Interpretations of our Models
+
+# Conclusion
+
+### Colab Notebooks and Github Links
