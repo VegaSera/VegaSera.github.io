@@ -80,8 +80,10 @@ Our random forest classifier gives us an accuracy of 92.88% on Validation and 92
 Our XGB Boost Classifier gives us an accuracy of 93.3% on Validation, and 93.3% on the Test set. Still just barely above our baseline but slightly improved.
 
 Our XGB Classifier model places high priority on Shrug It Off +1, the Red Mask relic, Heavy Blade +1, Pommel Strike +1, Limit Break +1, and the relics Bag of Preparation, Vajra, Busted Crown, Self Forming Clay, and Red Skull.
+
 Our XGB Classifier also shows a HEAVY negative correlation to the default strike, and losing. This could be because it's a default card, and not all runs get to the point where it can remove all strikes.
 Other cards this model doesn't favor is Bash, Defend, and to a lesser extent, Bite, Strike+1, and the Ascension Level
+
 This model places virtually no impact on roughly 75% of the features.
 
 
@@ -100,6 +102,9 @@ Most other cards and relics however have a positive impact on win rate. Shrug It
 ## What more could be done?
 I wrote the code with more exploration in mind. We could quite easily run this same code with the Silent and the Defect as well, if we had the time to run it.
 
+We could also get rid of a lot of the 'unimportant' features by specifying which cards/relics belong to which class. This would improve our model training speed by drastically reducing the number of features.
+
 We could also do more hyperparameter tweaking and tuning, which I did not do a huge amount of during this project, and we can also fit other model types for more insights.
 
 ### Colab Notebooks and Github Links
+[Notebook for this project](https://colab.research.google.com/drive/1zDhfoeg9uJOAC45ZHPGLhceZT6A-Psos)
