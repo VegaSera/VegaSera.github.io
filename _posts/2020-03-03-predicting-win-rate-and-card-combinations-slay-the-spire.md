@@ -34,7 +34,7 @@ What we are looking for with this project is whether or not we can correctly pre
 I sourced this data directly from Megacrit (the developers), who were more than happy to submit this data for analysis and modelling. They sent me 40GB of data, totalling over 50 million runs. This is a bit much to deal with, so we must trim this down a little.
 
 ### Cleaning and preparing our data
-My first step was to trim the data down to a manageable size. I took only a small subsection of the available data, 500 of the JSON files provided out of nearly 32,000.
+My first step was to trim the data down to a manageable size. I took only a small subsection of the available data, 600 of the JSON files provided out of nearly 32,000.
 
 Secondly, because the classes are mostly self-contained, I decided that it would be best to model only a single class, but write the code in such a way that any class could be modelled, or indeed all of them. In this instance, I chose the Ironclad. It is the oldest class and perhaps the most well understood by the Slay the Spire community. Next up is our feature selection.
 
@@ -58,7 +58,7 @@ Prismatic Shard allows us to choose cards from other classes when we are offered
 
 `df = df[df['RELIC_PrismaticShard'] == 0]`
 
-After which we drop all of our columns that only contain zeroes. This removes all of the cards that only appeared with the help of the Prismatic Shard. This is by no means perfect or comprehensive, as we still have columns like Footwork (A Silent card) that the player must have obtained through other means, but we have reduced our number of features from 690 to roughly 400. We could reduce this further by making a comprehensive list of relics and cards that are unique to a specific class, but I have chosen not to at this time.
+After which we drop all of our columns that only contain zeroes. This removes all of the cards that only appeared with the help of the Prismatic Shard. This is by no means perfect or comprehensive, as we still have columns like Footwork (A Silent card) that the player must have obtained through other means, but we have reduced our number of features from 695 to 524. We could reduce this further by making a comprehensive list of relics and cards that are unique to a specific class, but I have chosen not to at this time.
 
 After all of this, we're just about ready to begin training models. The only thing that's left is to drop our original master_deck and relics features and cast the victory column as a boolean. Now we can begin.
 
@@ -66,18 +66,40 @@ After all of this, we're just about ready to begin training models. The only thi
 
 To start out, we check our baseline for this set:
 
-During the various stages of modelling, with different sized subsections of the dataset, we have seen this baseline oscillate between 88% and 92.5% failure rate. However for this model, we will take the above value as our official baseline.
+[92.5% Accuracy Baseline, assuming all runs fail]
+
+During the various stages of modelling, with different sized subsections of the dataset, we have seen this baseline oscillate between 88% and 93% failure rate. However for this model, we will take the above value as our official baseline.
 
 ##First Model - Random Forest Classifier
+Our random forest classifier gives us an accuracy of 92.88% on Validation and 92.99% on the test set. This is only barely above our baseline of 92.5%. 
+
+
+
 
 ##Second Model - Gradient Boosting with XGBClassifier
+Our XGB Boost Classifier gives us an accuracy of 93.3% on Validation, and 93.3% on the Test set. Still just barely above our baseline but slightly improved.
 
-##Third Model - Ridge Regression Classifier with RidgeClassifierCV
+Our XGB Classifier model places high priority on Shrug It Off +1, the Red Mask relic, Heavy Blade +1, Pommel Strike +1, Limit Break +1, and the relics Bag of Preparation, Vajra, Busted Crown, Self Forming Clay, and Red Skull.
+Our XGB Classifier also shows a HEAVY negative correlation to the default strike, and losing. This could be because it's a default card, and not all runs get to the point where it can remove all strikes.
+Other cards this model doesn't favor is Bash, Defend, and to a lesser extent, Bite, Strike+1, and the Ascension Level
+This model places virtually no impact on roughly 75% of the features.
 
-# Analysis and Interpretations of our Models
+
+##Third Model - Ridge Classifier with RidgeClassifierCV
+Ridge Classifier gave us our best results, 94.26% on Validation, 94.0% on the Test set. 
 
 # Conclusion
+There are a number of conclusions we can draw from this data.
+
+First and foremost, every card the Ironclad starts with leans more towards losses, the most impactful of which being the basic Strike card. This is something that is corroborated by high level players, who often remove these basic strikes from their decks.
+
+The other starting cards also follow this pattern as well. Bash and Defend, as well as to a lesser extent the upgraded Strike. Bite also has a similar effect, despite not being a starter card.
+
+Most other cards and relics however have a positive impact on win rate. Shrug It Off +1, the Red Mask relic, Heavy Blade +1 and Pommel Strike +1 have very strong impacts on how often that deck wins.
 
 ## What more could be done?
+I wrote the code with more exploration in mind. We could quite easily run this same code with the Silent and the Defect as well, if we had the time to run it.
+
+We could also do more hyperparameter tweaking and tuning, which I did not do a huge amount of during this project, and we can also fit other model types for more insights.
 
 ### Colab Notebooks and Github Links
