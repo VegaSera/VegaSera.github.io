@@ -70,13 +70,13 @@ To start out, we check our baseline for this set:
 
 During the various stages of modelling, with different sized subsections of the dataset, we have seen this baseline oscillate between 88% and 93% failure rate. However for this model, we will take the above value as our official baseline.
 
-##First Model - Random Forest Classifier
+## First Model - Random Forest Classifier
 Our random forest classifier gives us an accuracy of 92.88% on Validation and 92.99% on the test set. This is only barely above our baseline of 92.5%. 
 
 
 
 
-##Second Model - Gradient Boosting with XGBClassifier
+## Second Model - Gradient Boosting with XGBClassifier
 Our XGB Boost Classifier gives us an accuracy of 93.3% on Validation, and 93.3% on the Test set. Still just barely above our baseline but slightly improved.
 
 Our XGB Classifier model places high priority on Shrug It Off +1, the Red Mask relic, Heavy Blade +1, Pommel Strike +1, Limit Break +1, and the relics Bag of Preparation, Vajra, Busted Crown, Self Forming Clay, and Red Skull.
@@ -85,7 +85,7 @@ Other cards this model doesn't favor is Bash, Defend, and to a lesser extent, Bi
 This model places virtually no impact on roughly 75% of the features.
 
 
-##Third Model - Ridge Classifier with RidgeClassifierCV
+## Third Model - Ridge Classifier with RidgeClassifierCV
 Ridge Classifier gave us our best results, 94.26% on Validation, 94.0% on the Test set. 
 
 # Conclusion
