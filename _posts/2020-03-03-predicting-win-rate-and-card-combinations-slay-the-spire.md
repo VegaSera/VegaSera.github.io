@@ -96,6 +96,8 @@ Ridge Classifier gave us our best results, 94.26% on Validation, 94.0% on the Te
 
 ![Ridge Classifier Permutation Importances](https://i.imgur.com/7xagtWs.png)
 
+Our Ridge Classifier much more strongly prioritizes relics over cards, which is a curious result.
+
 
 # Conclusion
 There are a number of conclusions we can draw from this data.
