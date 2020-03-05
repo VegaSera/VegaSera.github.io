@@ -75,12 +75,14 @@ For every model, we will show the model's permutation importances. Keep in mind 
 ## First Model - Random Forest Classifier
 Our random forest classifier gives us an accuracy of 92.88% on Validation and 92.99% on the test set. This is only barely above our baseline of 92.5%. 
 
+![RF Permutation Importances](https://i.imgur.com/7HvJ5x4.png)
 
 
 
 ## Second Model - Gradient Boosting with XGBClassifier
 Our XGB Boost Classifier gives us an accuracy of 93.3% on Validation, and 93.3% on the Test set. Still just barely above our baseline but slightly improved.
 
+![XGB Classifier Permutation Importances](https://i.imgur.com/7HvJ5x4.png)
 Our XGB Classifier model places high priority on Shrug It Off +1, the Red Mask relic, Heavy Blade +1, Pommel Strike +1, Limit Break +1, and the relics Bag of Preparation, Vajra, Busted Crown, Self Forming Clay, and Red Skull.
 
 Our XGB Classifier also shows a HEAVY negative correlation to the default strike, and losing. This could be because it's a default card, and not all runs get to the point where it can remove all strikes.
@@ -92,8 +94,13 @@ This model places virtually no impact on roughly 75% of the features.
 ## Third Model - Ridge Classifier with RidgeClassifierCV
 Ridge Classifier gave us our best results, 94.26% on Validation, 94.0% on the Test set. 
 
+![Ridge Classifier Permutation Importances](https://i.imgur.com/7xagtWs.png)
+
+
 # Conclusion
 There are a number of conclusions we can draw from this data.
+
+Firstly, looking at all of our permutation importances, we can see that the weight for every feature is rather low. This is to be expected, because having certain cards can slightly help your chances, but ultimately what determines your chance to win is your own skill and random chance. We see that some cards are more important than others, though.
 
 This graph is based off of the shap values of our XGB Classifier, as I could not get this same style graph for the other two models. However the unsorted feature importances for each model tend to agree.
 ![Shap Importances](https://i.imgur.com/KYjQtis.png)
@@ -103,6 +110,8 @@ First and foremost, every card the Ironclad starts with leans more towards losse
 The other starting cards also follow this pattern as well. Bash and Defend, as well as to a lesser extent the upgraded Strike. Bite also has a similar effect, despite not being a starter card.
 
 Most other cards and relics however have a positive impact on win rate. Shrug It Off +1, the Red Mask relic, Heavy Blade +1 and Pommel Strike +1 have very strong impacts on how often that deck wins.
+
+Ascension Level has a negative impact in this model. Higher ascensions tend to result in more losses, which is expected given that ascensions increase the difficulty.
 
 ## What more could be done?
 I wrote the code with more exploration in mind. We could quite easily run this same code with the Silent and the Defect as well, if we had the time to run it.
