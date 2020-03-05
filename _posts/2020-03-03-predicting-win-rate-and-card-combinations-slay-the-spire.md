@@ -70,6 +70,8 @@ To start out, we check our baseline for this set:
 
 During the various stages of modelling, with different sized subsections of the dataset, we have seen this baseline oscillate between 88% and 93% failure rate. However for this model, we will take the above value as our official baseline.
 
+For every model, we will show the model's permutation importances. Keep in mind that these values show how important the feature is to the model, and does not necessarily dictate which direction the feature might push the result.
+
 ## First Model - Random Forest Classifier
 Our random forest classifier gives us an accuracy of 92.88% on Validation and 92.99% on the test set. This is only barely above our baseline of 92.5%. 
 
@@ -93,6 +95,9 @@ Ridge Classifier gave us our best results, 94.26% on Validation, 94.0% on the Te
 # Conclusion
 There are a number of conclusions we can draw from this data.
 
+This graph is based off of the shap values of our XGB Classifier, as I could not get this same style graph for the other two models. However the unsorted feature importances for each model tend to agree.
+![Shap Importances](https://i.imgur.com/KYjQtis.png)
+
 First and foremost, every card the Ironclad starts with leans more towards losses, the most impactful of which being the basic Strike card. This is something that is corroborated by high level players, who often remove these basic strikes from their decks.
 
 The other starting cards also follow this pattern as well. Bash and Defend, as well as to a lesser extent the upgraded Strike. Bite also has a similar effect, despite not being a starter card.
@@ -103,6 +108,8 @@ Most other cards and relics however have a positive impact on win rate. Shrug It
 I wrote the code with more exploration in mind. We could quite easily run this same code with the Silent and the Defect as well, if we had the time to run it.
 
 We could also get rid of a lot of the 'unimportant' features by specifying which cards/relics belong to which class. This would improve our model training speed by drastically reducing the number of features.
+
+We could filter the shorter runs out to see how much of an effect the base cards have on runs that last long enough to have had the opportunity to get rid of them.
 
 We could also do more hyperparameter tweaking and tuning, which I did not do a huge amount of during this project, and we can also fit other model types for more insights.
 
