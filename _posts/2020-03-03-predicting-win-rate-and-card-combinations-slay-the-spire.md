@@ -75,7 +75,7 @@ For every model, we will show the model's permutation importances. Keep in mind 
 ## First Model - Random Forest Classifier
 Our random forest classifier gives us an accuracy of 92.88% on Validation and 92.99% on the test set. This is only barely above our baseline of 92.5%. 
 
-![RF Permutation Importances](https://i.imgur.com/7HvJ5x4.png)
+![RF Permutation Importances](https://i.imgur.com/L2S6W4N.png)
 
 
 
