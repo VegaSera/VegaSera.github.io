@@ -83,12 +83,8 @@ Our random forest classifier gives us an accuracy of 92.88% on Validation and 92
 Our XGB Boost Classifier gives us an accuracy of 93.3% on Validation, and 93.3% on the Test set. Still just barely above our baseline but slightly improved.
 
 ![XGB Classifier Permutation Importances](https://i.imgur.com/7HvJ5x4.png)
-Our XGB Classifier model places high priority on Shrug It Off +1, the Red Mask relic, Heavy Blade +1, Pommel Strike +1, Limit Break +1, and the relics Bag of Preparation, Vajra, Busted Crown, Self Forming Clay, and Red Skull.
 
-Our XGB Classifier also shows a HEAVY negative correlation to the default strike, and losing. This could be because it's a default card, and not all runs get to the point where it can remove all strikes.
-Other cards this model doesn't favor is Bash, Defend, and to a lesser extent, Bite, Strike+1, and the Ascension Level
 
-This model places virtually no impact on roughly 75% of the features.
 
 
 ## Third Model - Ridge Classifier with RidgeClassifierCV
