@@ -38,13 +38,13 @@ My first step was to trim the data down to a manageable size. I took only a smal
 
 Secondly, because the classes are mostly self-contained, I decided that it would be best to model only a single class, but write the code in such a way that any class could be modelled, or indeed all of them. In this instance, I chose the Ironclad. It is the oldest class and perhaps the most well understood by the Slay the Spire community. Next up is our feature selection.
 
-[Image of list of columns before cleaning]
+![Columns in the dataset](https://i.imgur.com/ClWfoGI.png)
 
 As you can see, we have a lot of data for each individual run, including a lot of things we dont particularly care about, a lot of which would introduce leakage into our model. Features like floor_reached, playtime, and score are directly correlated to if a player wins or not. The Spire has a set number of floors, runs tend to last for a reasonably consistent amount of time (speedrunners not withstanding), and score tends to go up as the player completes floors. Features like this, while they would certainly increase our model's scores, would do nothing to provide us with any insights to the cards or the relics.
 
 Additionally, there are some features that indicate runs that we would want to exclude entirely. Features like is_seeded or is_endless. To seed a run is to provide it a specific number to it's random generator, which guarantees specific layouts and outcomes, provided you play the same way. Endless runs are unwinnable by default, so we will exclude those also.
 
-[Image of pared down dataset]
+![Image of pared down dataset](https://i.imgur.com/tA7JLWj.png)
 
 We get rid of all of the features we dont care about immediately and we're left with three features. We're left with the list of cards that the player finished the run with, the list of relics the player finished the run with, the ascension level the run was on, and whether or not the run won or not. However, we're not yet ready to train our model. Both the master_deck and relics columns are simply just strings, our model can't work with them as is.
 
