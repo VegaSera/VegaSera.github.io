@@ -1,16 +1,20 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+Hello, my name is Wesley Mountford and I'm a data scientist with a desire to not only learn, but to have a deep understanding of the things I work with. Over the past few years, I have jumped from hobby to hobby, everything from woodworking, both small and large metalworking, robotics, leatherworking, painting, sculpting, archery, cycling, and the list goes on and on. I am a lifelong learner with an insatiable appetite for learning new skills.
 
-What else do you need?
+Proficient in the following technologies:
 
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+- Python 
+- Tensorflow/Keras
+- SKLearn
+- MatPlotLib/Plotly
+- Statistics
+- AWS (Elastic Beanstalk, S3)
+- Flask / Fast API / Django
+- OpenCV
+- SQLite
+- Linux
