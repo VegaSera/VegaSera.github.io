@@ -28,7 +28,7 @@ navbar-links:
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/img/avatar-icon.png"
+avatar: "/img/headshot.PNG"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
@@ -73,7 +73,7 @@ social-network-links:
   github: VegaSera
   #twitter: daattali
 #  reddit: yourname
-#  linkedin: daattali
+  linkedin: wesley-mountford
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -90,10 +90,11 @@ share-links-active:
   twitter: false
   facebook: false
   linkedin: true
+  github: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "WMountford.com"  # eg. "deanattali.com/beautiful-jekyll"
+# url-pretty: "WMountford.com"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
